@@ -1,0 +1,15 @@
+{
+  "name": "alphatech-test-demo",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 60000"
+  },
+  "author": "Lapshov",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.5.3",
+    "selenium-webdriver": "^3.5.0"
+  }
+}
