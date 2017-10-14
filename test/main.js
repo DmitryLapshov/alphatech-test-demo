@@ -1,5 +1,6 @@
 var 
 	webdriver = require('selenium-webdriver'),
+	firefox = require('selenium-webdriver/firefox'),
 	By = webdriver.By,
 	until = webdriver.until,
 	assert = require('assert'),
@@ -13,15 +14,15 @@ test.describe('AlphaTech Test Demo', function () {
 		timeout = 30000,
 		windowScroll = function () {
 			driver.executeScript(function () { return document.body.scrollHeight; }).then(function (height) {
-				var i;
-				for(i = 1; i < height; i += 10) {
+				for(var i = 1; i < height; i += 10) {
 					driver.executeScript('window.scrollTo(0, ' + i + ')');
 				}
 			});
 		};
 
 	test.before(function () {
-		driver = new webdriver.Builder().forBrowser('firefox').build();
+		var options = new firefox.Options().setBinary('/usr/local/lib/firefox/firefox');
+		driver = new webdriver.Builder().forBrowser('firefox').setFirefoxOptions(options).build();
 	});
 
 	test.after(function () {
