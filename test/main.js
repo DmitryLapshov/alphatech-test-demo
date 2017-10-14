@@ -1,6 +1,6 @@
 var 
 	webdriver = require('selenium-webdriver'),
-	firefox = require('selenium-webdriver/firefox'),
+	//firefox = require('selenium-webdriver/firefox'),
 	By = webdriver.By,
 	until = webdriver.until,
 	assert = require('assert'),
@@ -21,8 +21,9 @@ test.describe('AlphaTech Test Demo', function () {
 		};
 
 	test.before(function () {
-		var options = new firefox.Options().setBinary('/usr/local/lib/firefox/firefox');
-		driver = new webdriver.Builder().forBrowser('firefox').setFirefoxOptions(options).build();
+		//var options = new firefox.Options().setBinary('/usr/local/lib/firefox/firefox');
+		//driver = new webdriver.Builder().forBrowser('firefox').setFirefoxOptions(options).build();
+		driver = new webdriver.Builder().forBrowser('chrome').build();
 	});
 
 	test.after(function () {
