@@ -2,6 +2,7 @@
   "name": "alphatech-test-demo",
   "version": "1.0.0",
   "description": "Test",
+  "repository": "https://github.com/DmitryLapshov/alphatech-test-demo.git",
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 60000"
